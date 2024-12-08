@@ -1,9 +1,10 @@
 import { BrowserRouter } from "react-router";
-import { Root } from "./app/root";
+import Root from "./root";
 
 function App() {
   return (
     <BrowserRouter>
+      あああいいい
       <Root />
     </BrowserRouter>
   );

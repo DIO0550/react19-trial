@@ -3,6 +3,7 @@ import { NavLink } from "react-router";
 
 const Home = memo(() => (
   <div>
+    あああああああああ
     <NavLink to="/action-state" end>
       action-state
     </NavLink>
