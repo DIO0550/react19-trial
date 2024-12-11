@@ -1,5 +1,5 @@
 // React Router generated types for route:
-// ./routes/actionState/index.tsx
+// routes/actionState/index.tsx
 
 import type * as T from "react-router/route-module"
 
@@ -11,7 +11,7 @@ type Module = typeof import("../index.js")
 export type Info = {
   parents: [Parent0, Parent1],
   id: "routes/actionState/index"
-  file: "./routes/actionState/index.tsx"
+  file: "routes/actionState/index.tsx"
   path: "action-state"
   params: {} & { [key: string]: string | undefined }
   module: Module
