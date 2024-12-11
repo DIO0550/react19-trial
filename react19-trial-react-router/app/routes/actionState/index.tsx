@@ -2,7 +2,7 @@ import {
   RegisterUserApi,
   RegisterUserApiResponse,
 } from "../../apis/registerUser";
-import { useActionState, useRef, useState } from "react";
+import { useActionState, useRef } from "react";
 
 type State = {
   registerId: string;
@@ -55,24 +55,12 @@ const register = async (state: State, action: Action): Promise<State> => {
 };
 
 const ActionState = () => {
-  const [state, formAction, isPending] = useActionState(register, initialState);
+  const [state, dispatch, isPending] = useActionState(register, initialState);
   const idRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
-  const [count] = useState(0);
-  console.log("onClick");
-
   return (
     <div>
       {<div>{isPending ? "Loading" : "None"}</div>}
-
-      <button
-        onClick={() => {
-          console.log("hoge");
-        }}
-      >
-        +1
-      </button>
-      <div>{count}</div>
 
       <label htmlFor="id">ID：</label>
       <input ref={idRef} type="input" name="id" id="id" />
@@ -82,8 +70,7 @@ const ActionState = () => {
 
       <button
         onClick={() => {
-          console.log("onClick");
-          formAction({
+          dispatch({
             type: "register",
             payload: {
               id: idRef.current?.value ?? "",

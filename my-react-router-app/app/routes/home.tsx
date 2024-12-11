@@ -12,26 +12,28 @@
 //   return <Welcome />;
 // }
 
-import { memo } from "react";
+import { memo, useState } from "react";
 import { NavLink } from "react-router";
 
-let count = 1;
+const Home = memo(() => {
+  const [count, setCount] = useState(0);
 
-const Home = memo(() => (
-  <div>
-    <NavLink to="/action-state" end>
-      action-state
-    </NavLink>
+  return (
+    <div>
+      <NavLink to="/action-state" end>
+        action-state
+      </NavLink>
 
-    <div>{count}</div>
-    <button
-      onClick={() => {
-        count += 1;
-      }}
-    >
-      +1
-    </button>
-  </div>
-));
+      <div>{count}</div>
+      <button
+        onClick={() => {
+          setCount((cur) => cur + 1);
+        }}
+      >
+        +1
+      </button>
+    </div>
+  );
+});
 
 export default Home;
