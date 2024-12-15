@@ -20,6 +20,11 @@ const Home = memo(() => (
         use-form-status
       </NavLink>
     </div>
+    <div>
+      <NavLink to="/use-optimistic" end>
+        use-optimistic
+      </NavLink>
+    </div>
   </div>
 ));
 
