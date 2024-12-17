@@ -25,6 +25,11 @@ const Home = memo(() => (
         use-optimistic
       </NavLink>
     </div>
+    <div>
+      <NavLink to="/use" end>
+        use
+      </NavLink>
+    </div>
   </div>
 ));
 

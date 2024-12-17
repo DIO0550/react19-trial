@@ -11,5 +11,6 @@ export default [
     route("use-action-state", "routes/useActionState/index.tsx"),
     route("use-form-status", "routes/useFormStatus/index.tsx"),
     route("use-optimistic", "routes/useOptimistic/index.tsx"),
+    route("use", "routes/use/index.tsx"),
   ]),
 ] satisfies RouteConfig;
