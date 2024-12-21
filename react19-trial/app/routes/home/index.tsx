@@ -26,8 +26,13 @@ const Home = memo(() => (
       </NavLink>
     </div>
     <div>
-      <NavLink to="/use" end>
-        use
+      <NavLink to="/use-context" end>
+        use(context)
+      </NavLink>
+    </div>
+    <div>
+      <NavLink to="/use-promise" end>
+        use(promise)
       </NavLink>
     </div>
   </div>
