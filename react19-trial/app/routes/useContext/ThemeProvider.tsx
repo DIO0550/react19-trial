@@ -11,11 +11,7 @@ const ThemeProvider = ({ children }: Props) => {
     return { theme, setTheme };
   }, [theme]);
 
-  return (
-    <ThemeContext.Provider value={themeContextValue}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext value={themeContextValue}>{children}</ThemeContext>;
 };
 
 export default ThemeProvider;
